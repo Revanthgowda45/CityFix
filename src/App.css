@@ -1,0 +1,8 @@
+
+/* Clean up the styles to avoid conflicts with the theme system */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
