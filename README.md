@@ -1,73 +1,93 @@
-# Welcome to your Lovable project
+<div align="center">
+  <img src="public/cityfix-icon.svg" alt="CityFix Logo" width="120" height="120">
+  <h1>CityFix</h1>
+  <p><strong>Empowering citizens to improve urban environments</strong></p>
+</div>
 
-## Project info
+<p align="center">
+  <a href="#frontend">Frontend</a> •
+  <a href="#backend">Backend</a>
+</p>
 
-**URL**: https://lovable.dev/projects/c90dfa82-24bf-40c6-96ac-6bf6d378aa85
+<p align="center">
+  <strong>🔗 <a href="https://finecityfix.netlify.app/" target="_blank">Live Demo</a></strong>
+</p>
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+CityFix is a comprehensive civic engagement platform that empowers citizens to report and track urban issues in their communities. From potholes and broken streetlights to garbage collection problems and public safety concerns, CityFix provides a streamlined interface for citizens to communicate with local authorities and see real results.
 
-**Use Lovable**
+## Frontend
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c90dfa82-24bf-40c6-96ac-6bf6d378aa85) and start prompting.
+### Core Technologies
+- **Language**: TypeScript 5.5 - Strong type safety throughout the application
+- **Framework**: React 18.3 - Latest React features including concurrent rendering
+- **Build Tool**: Vite 5.4 - Lightning-fast HMR and optimized production builds
 
-Changes made via Lovable will be committed automatically to this repo.
+### Architecture
+- **Component Structure**: Modular component-based architecture with context separation
+- **Code Splitting**: React.lazy and Suspense for optimized loading
+- **Error Handling**: React Error Boundary for graceful error management
+- **Routing**: React Router v6 with protected routes for authentication
 
-**Use your preferred IDE**
+### State Management
+- **Global State**: React Context API with specialized contexts:
+  - `AuthContext`: User authentication and permissions
+  - `ReportContext`: Issue reporting and management
+  - `SettingsContext`: User preferences and application settings
+  - `NotificationContext`: User notifications and alerts
+- **Server State**: TanStack Query (React Query 5) for efficient data fetching, caching, and synchronization
+- **Form State**: React Hook Form 7 with Zod validation schema for robust form handling
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### UI & Styling
+- **Component Library**: shadcn/ui built on Radix UI primitives
+- **CSS Framework**: Tailwind CSS 3.4 with utility-first styling
+- **Theming**: Dynamic theme support with light/dark mode switching
+- **Animations**: Framer Motion for fluid, high-performance animations
+- **Notifications**: Toast and notification systems for user feedback
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Maps & Geolocation
+- **Mapping Library**: Leaflet 1.9 with React-Leaflet components
+- **Base Maps**: OpenStreetMap for detailed, community-maintained cartography
+- **Geolocation**: Browser Geolocation API integration
+- **Custom Features**: Location picking, issue clustering, and map filtering
 
-Follow these steps:
+## Backend
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Supabase Integration
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+#### Authentication & User Management
+- **Auth Flow**: Complete authentication system with email/password login
+- **Session Handling**: Persistent sessions with automatic token refresh
+- **User Roles**: Role-based authorization (citizen, staff, admin)
+- **Profile Management**: User profile data with avatar storage
+- **Security**: Password reset, email verification, and session monitoring
 
-# Step 3: Install the necessary dependencies.
-npm i
+#### Database Architecture
+- **PostgreSQL Database**: Relational database with structured schema
+- **Row-Level Security**: Policy-based access control for data protection
+- **Core Tables**:
+  - `issues`: Urban issues with location, status, and category
+  - `profiles`: User information including roles and preferences
+  - `issue_comments`: Community discussion on reported issues
+  - `votes`: Community support tracking for prioritization
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+#### API Layer
+- **Data Services**: Abstracted client for consistent data access
+- **Query Optimization**: Efficient queries with selected fields
+- **Error Handling**: Comprehensive error management and recovery
+- **State Synchronization**: Consistent data state between client and server
 
-**Edit a file directly in GitHub**
+#### Storage Solution
+- **Image Management**: Storage for issue photos and user avatars
+- **Upload Pipeline**: Secure, optimized image upload workflow
+- **Transformations**: Image processing for different display contexts
+- **Delivery**: Fast CDN-backed content delivery
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+#### Real-time Capabilities
+- **Live Updates**: Instant UI updates through subscriptions
+- **Channels**: Dedicated real-time channels for different data types
+- **Filtered Subscriptions**: Targeted updates for specific data changes
+- **Resilient Connection**: Graceful handling of connection issues
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c90dfa82-24bf-40c6-96ac-6bf6d378aa85) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+<p align="center">Made with ❤️ for better communities</p>
