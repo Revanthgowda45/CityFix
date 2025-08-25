@@ -196,10 +196,6 @@ yarn preview
 
 The application supports deployment to platforms like Netlify, Vercel, or any static hosting provider.
 
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ---
 
 <p align="center">Made with ❤️ for better communities</p>
